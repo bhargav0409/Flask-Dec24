@@ -11,8 +11,13 @@ def test_home(client):
     resp = client.get("/")
     assert resp.status_code == 200
     #assert b"loan Approval Application" in resp.data
-    assert resp.text == "<h1>loan Approval Application</h1>"
+    assert resp.text == "<h1>loan Approval Application V2!!!</h1>"
 
+def test_home(client):
+    resp = client.get("/ping")
+    assert resp.status_code == 200
+    #assert b"loan Approval Application" in resp.data
+    assert resp.text == {"message":"Hey there..!!"}
 
 def test_predict(client):
     test_data= {
