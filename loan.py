@@ -12,7 +12,7 @@ def home():
     return "<h1>loan Approval Application V2!!!</h1>"
 
 @app.route('/ping')
-def home():
+def ping():
     return {"message":"Hey there..!!"}
 
 @app.route('/predict', methods=['GET','POST'])
